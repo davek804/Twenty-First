@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <TableRow
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/questionTableRow"
+            style="@style/questionTableRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/questionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="18sp"
+                    android:textStyle="italic"
+                    android:textColor="@color/androidBlue"
+                     />
+
+                <RadioGroup
+                    android:id="@+id/responseRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" 
+                    android:layout_gravity="left">
+
+                </RadioGroup>
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                     >
+
+                    <Button
+                        android:id="@+id/chartsButton"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/viewCharts" />
+
+                    <Button
+                        android:id="@+id/submitButton"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/submit" />
+
+
+                </TableRow>
+
+
+            </LinearLayout>
+
+         </TableRow>

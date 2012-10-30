@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableLayout
+        android:id="@+id/demoTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Provide as much or little as you like!" android:gravity="center"/>
+
+        <TableRow
+            android:id="@+id/ageTableRow"
+            style="@style/questionTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/ageTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/age"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/ageEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/pleaseSelect"
+                android:textColor="@color/androidBlue"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:singleLine="true" android:gravity="center" android:layout_gravity="bottom"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/maritalTableRow"
+            style="@style/questionTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/maritalTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/marital"
+                android:gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <EditText
+                android:id="@+id/maritalEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/pleaseSelect"
+                android:textColor="@color/androidBlue"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:singleLine="true" android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/backgroundTableRow"
+            style="@style/questionTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/backgroundTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/background"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/backgroundEditText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/pleaseSelect"
+                android:textColor="@color/androidBlue"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:focusableInTouchMode="false" android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/educationTableRow"
+            style="@style/questionTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/educationTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/education"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/educationEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/pleaseSelect"
+                android:textColor="@color/androidBlue"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:focusableInTouchMode="false" 
+                android:singleLine="true" android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/incomeTableRow"
+            style="@style/questionTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/incomeTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/income"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/incomeEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/pleaseSelect"
+                android:textColor="@color/androidBlue"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:singleLine="true" android:gravity="center"/>
+
+            <requestFocus />
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/partyTableRow"
+            style="@style/questionTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="3dp" >
+
+            <TextView
+                android:id="@+id/partyTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/party"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center_vertical"/>
+
+            <EditText
+                android:id="@+id/partyEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="@string/pleaseSelect"
+                android:textColor="@color/androidBlue"
+                android:cursorVisible="false"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:singleLine="true" android:gravity="center"/>
+
+            <requestFocus />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/employmentTableRow"
+            style="@style/questionTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_height="match_parent"
+                android:text="@string/employment"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center_vertical" android:layout_weight="1" android:layout_width="0dp"/>
+
+            <RadioGroup
+                android:id="@+id/employmentRadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <RadioButton
+                    android:id="@+id/employedTrueRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/yes"
+                    android:textColor="@color/androidBlue"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/employedFalseRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/no"
+                    android:textColor="@color/androidBlue"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/employedSelfRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/self"
+                    android:textColor="@color/androidBlue"
+                    android:textSize="15sp" />
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/sexTableRow"
+            style="@style/questionTableRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:paddingTop="3dp">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_height="match_parent"
+                android:text="@string/sex"
+                android:textAppearance="?android:attr/textAppearanceLarge" android:gravity="center_vertical" android:layout_weight="1" android:layout_width="0dp"/>
+
+            <RadioGroup
+                android:id="@+id/sexRadioGroup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <RadioButton
+                    android:id="@+id/femaleRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/female"
+                    android:textColor="@color/androidBlue"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/maleRadio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/male"
+                    android:textColor="@color/androidBlue"
+                    android:textSize="15sp" />
+            </RadioGroup>
+      </TableRow>
+
+      <TableRow android:id="@+id/buttonTableRow" android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+
+
+         
+
+              <LinearLayout
+                  style="?android:attr/buttonBarStyle"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1"
+                  android:orientation="horizontal" 
+                   android:divider="?android:attr/dividerHorizontal"
+                  android:gravity="bottom"
+                  android:showDividers="middle">
+
+                  <Button
+                      android:id="@+id/resetButton"
+                      style="?android:attr/buttonBarButtonStyle"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:text="@string/reset" />
+
+                  <Button
+                      android:id="@+id/submitButton"
+                      style="?android:attr/buttonBarButtonStyle"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:layout_weight="1"
+                      android:text="@string/submit" />
+              </LinearLayout>
+
+
+        </TableRow>
+
+    </TableLayout>
+
+</ScrollView>

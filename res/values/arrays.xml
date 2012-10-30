@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="ageArray">
+		<item>1999</item>
+		<item>1998</item>
+		<item>1997</item>
+		<item>1996</item>
+		<item>1995</item>
+		<item>1994</item>
+		<item>1993</item>
+		<item>1992</item>
+		<item>1990</item>
+		<item>1989</item>
+		<item>1988</item>
+		<item>1987</item>
+		<item>1986</item>
+		<item>1985</item>
+		<item>1984</item>
+		<item>1983</item>
+		<item>1982</item>
+		<item>1981</item>
+		<item>1980</item>
+		<item>1979</item>
+		<item>1978</item>
+		<item>1977</item>
+		<item>1976</item>
+		<item>1975</item>
+		<item>1974</item>
+		<item>1973</item>
+		<item>1972</item>
+		<item>1971</item>
+		<item>1970</item>
+		<item>1969</item>
+		<item>1968</item>
+		<item>1967</item>
+		<item>1966</item>
+		<item>1965</item>
+		<item>1964</item>
+		<item>1963</item>
+		<item>1962</item>
+		<item>1961</item>
+		<item>1960</item>
+		<item>1959</item>
+		<item>1958</item>
+		<item>1957</item>
+		<item>1956</item>
+		<item>1955</item>
+		<item>1954</item>
+		<item>1953</item>
+		<item>1952</item>
+		<item>1951</item>
+		<item>1950</item>
+		<item>1949</item>
+		<item>1948</item>
+		<item>1947</item>
+		<item>1946</item>
+		<item>1945</item>
+		<item>1944</item>
+		<item>1943</item>
+		<item>1942</item>
+		<item>1941</item>
+		<item>1940</item>
+		<item>1939</item>
+		<item>1938</item>
+		<item>1937</item>
+		<item>1936</item>
+		<item>1935</item>
+		<item>1934</item>
+		<item>1933</item>
+		<item>1932</item>
+		<item>1931</item>
+		<item>1930</item>
+	</string-array>
+
+	<string-array name="eduArray">
+		<item>Some high school</item>
+		<item>High school diploma</item>
+		<item>GED</item>
+		<item>Vocational degree</item>
+		<item>Some college</item>
+		<item>Associate\'s degree</item>
+		<item>Bachelor\'s degree</item>
+		<item>Master\'s degree</item>
+		<item>Ph.D/Juris doctorate/etc</item>
+	</string-array>
+
+	<string-array name="maritalArray">
+		<item>Single</item>
+		<item>Married</item>
+		<item>Divorced</item>
+		<item>Committed/long-term</item>
+	</string-array>
+
+	<string-array name="nationalityArray">
+		<item>Misc. European</item>
+		<item>Misc. African</item>
+		<item>Asian</item>
+		<item>American/Alaska Native</item>
+		<item>Middle Eastern</item>
+		<item>Islander</item>
+		<item>Other</item>
+		<item>Identified by two or more</item>
+	</string-array>
+	
+		<string-array name="backgroundArray">
+		<item>White</item>
+		<item>Black or African American</item>
+		<item>American or Alaska Native</item>
+		<item>Asian</item>
+		<item>Pacific Islander</item>
+		<item>Hispanic or Latino</item>
+		<item>Other</item>
+	</string-array>
+	
+	<string-array name="incomeArray">
+		<item>$0-10,000</item>
+		<item>$10,000-20,000</item>
+		<item>$20,000-30,000</item>
+		<item>$30,000-40,000</item>
+		<item>$40,000-50,000</item>
+		<item>$50,000-60,000</item>
+		<item>$60,000-70,000</item>
+		<item>$70,000-80,000</item>
+		<item>$80,000-90,000</item>
+		<item>$90,000-100,000</item>
+		<item>$100,000-150,000</item>
+		<item>$150,000-200,000</item>
+		<item>$200,000-250,000</item>
+		<item>$250,000-300,000</item>
+		<item>$300,000+</item>
+	</string-array>
+	
+		<string-array name="partyArray">
+		<item>Democratic Party</item>
+	<item>Republican Party</item>
+	<item>Independent</item>
+	<item>Non-affiliated</item>
+	<item>Constitution Party</item>
+	<item>Green Party </item>
+	<item>Libertarian Party</item>
+	</string-array>
+	
+	<string-array name="tabsArray">
+	    <item>You don\'t actually think this is working, do you?</item>
+		<item>Geographics</item>
+		<item>Economics</item>
+		<item>Elections</item>
+		<item>Politics</item>
+		<item>Science</item>
+		<item>Finance</item>
+		<item>Religion</item>
+		<item>International</item>
+		<item>Military</item>
+		
+	</string-array>
+
+</resources>

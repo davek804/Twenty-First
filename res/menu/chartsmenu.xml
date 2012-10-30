@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_demos"          
+          android:title="Chart +/-"
+          android:showAsAction="always|withText" />
+    <item android:id="@+id/menu_data"          
+          android:title="Datas"
+          android:showAsAction="always|withText" />
+    <item android:id="@+id/menu_reset"          
+          android:title="Reset"
+          android:showAsAction="always|withText" />
+</menu>
