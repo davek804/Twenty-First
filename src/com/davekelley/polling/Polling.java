@@ -69,8 +69,8 @@ public class Polling extends SherlockFragmentActivity {
 		
 		mTabsAdapter.addTab(bar.newTab().setText(R.string.login),
 				LoginFragment.class, null);
-		mTabsAdapter.addTab(bar.newTab().setText("Geographics"),
-				GeoFragment.class, null);
+		//mTabsAdapter.addTab(bar.newTab().setText("Geographics"),
+				//GeoFragment.class, null);
 		mTabsAdapter.addTab(bar.newTab().setText(R.string.economics),
 				EconFragment.class, null);
 		mTabsAdapter.addTab(bar.newTab().setText(R.string.elections),
