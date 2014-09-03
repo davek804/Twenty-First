@@ -1,16 +1,18 @@
 package com.davekelley.polling;
 
 import library.DatabaseHandler;
-import android.R;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
 
 public class Polling extends Activity {
@@ -20,8 +22,10 @@ public class Polling extends Activity {
 	SharedPreferences sp;
 	Toast toast;
 	ActionBar bar;
-	/*String [] tabs = {"Econ", "Elections", "Geo", "Politics", "Science", "Finance", "Religion", 
-			"Military", "International" };*/
+	String [] tabs = {"Econ", "Elections", "Geo", "Politics", "Science", "Finance", "Religion", 
+			"Military", "International" };
+	private DrawerLayout mDrawerLayout;
+	ListView mDrawerList;
 	
 	/*First method that runs when the app launches. Establishes the ActionBar,
 	 * instantiates each tab on screen, and builds a ViewPager that allows the user
@@ -31,10 +35,16 @@ public class Polling extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		db = new DatabaseHandler(getApplicationContext());
-//		#mViewPager = new ViewPager(this);
-//		#mViewPager.setId(R.id.pager);
-//		#setContentView(mViewPager);
+		setContentView(R.layout.prelogin);
 		
+		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		mDrawerList = (ListView) findViewById(R.id.left_drawer);
+		
+		mDrawerList.setAdapter(new ArrayAdapter<String>(this,
+				R.layout.drawer_list_item, tabs));
+		
+		//mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+
 		
 /*		if(savedInstanceState != null) {
 		mViewPager.setCurrentItem(savedInstanceState.getInt("lastPosition"));
@@ -42,7 +52,7 @@ public class Polling extends Activity {
 		}*/
 		
 		bar = getActionBar();
-		bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		//bar.setNavigationMode(ActionBar);
 		bar.setDisplayShowTitleEnabled(true);
 		bar.setDisplayShowHomeEnabled(true);
 				
@@ -71,6 +81,8 @@ public class Polling extends Activity {
 //				InternationalFragment.class, null);	
 		
 	}
+	
+	
 	
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
         //Handle the back button

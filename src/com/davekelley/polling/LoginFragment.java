@@ -52,7 +52,7 @@ public class LoginFragment extends Fragment {
 		//Log.v("LF", "onCV");
 		userFunctions = new UserFunctions();
 		dbHandler = activity.getDB();
-		View v = inflater.inflate(R.layout.bothlogins, container, false);
+		View v = inflater.inflate(R.layout.prelogin, container, false);
 		wholeLayout = v;
 		loginLayout = (ScrollView) v.findViewById(R.id.loginScrollView);
 		loggedInLayout = (LinearLayout) v.findViewById(R.id.loggedInLinearLayout);
