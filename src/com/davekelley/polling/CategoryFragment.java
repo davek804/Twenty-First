@@ -8,10 +8,10 @@ import library.UserFunctions;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.actionbarsherlock.R;
-import com.actionbarsherlock.app.SherlockFragment;
 
+import android.R;
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -32,7 +32,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class CategoryFragment extends SherlockFragment {
+public class CategoryFragment extends Fragment {
 	View layout;
 	TableLayout questionContainer;
 	int leftMargin=0;
