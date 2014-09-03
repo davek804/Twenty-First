@@ -48,18 +48,30 @@ public class EconFragment extends SherlockFragment {
 	LayoutInflater inflater;
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		this.inflater = inflater;
-		tableList = new ArrayList<TableRow>();
-		
-		dbHandler = activity.getDB();
-		View v = inflater.inflate(R.layout.categoryfragment, container, false);
-		layout = v;
-		RelativeLayout progressRow = (RelativeLayout) layout.findViewById(R.id.progressRow);
-		GetQuestionsTask questionsTask = new GetQuestionsTask(activity, progressRow, this);
-		questionsTask.execute();	
-		return v;
+
+		userFunctions = new UserFunctions();
+		if (userFunctions.isUserLoggedIn(activity)) {
+
+			this.inflater = inflater;
+			tableList = new ArrayList<TableRow>();
+
+			dbHandler = activity.getDB();
+			View v = inflater.inflate(R.layout.categoryfragment, container, false);
+			layout = v;
+			RelativeLayout progressRow = (RelativeLayout) layout.findViewById(R.id.progressRow);
+			GetQuestionsTask questionsTask = new GetQuestionsTask(activity, progressRow, this);
+			questionsTask.execute();	
+			return v;
+		} else {
+			this.inflater = inflater;
+			View v = inflater.inflate(R.layout.notloggedin, container, false);
+			TextView error = (TextView) v.findViewById(R.id.noUserTextView);
+			layout = v;
+			error.setText("Please log in to view questions!");
+			return v;
+		}
 	}
-	
+
 	public void buildQuestions(JSONObject question, boolean isAnswered) throws JSONException {
 		if (isAnswered){
 			questionContainer = (TableLayout) layout.findViewById(R.id.questionContainer);
@@ -175,7 +187,6 @@ public class EconFragment extends SherlockFragment {
 
 	public OnClickListener submitListener = new OnClickListener() {
 		public void onClick(View v) {
-			userFunctions = new UserFunctions();
 			if (userFunctions.isUserLoggedIn(activity)) {
 				TagObj tagObject = (TagObj) v.getTag();
 				RadioGroup radioGroup = tagObject.getRadioGroup();
@@ -230,22 +241,34 @@ public class EconFragment extends SherlockFragment {
 				Toast toast = Toast.makeText(activity.getApplicationContext(), "Please login!", Toast.LENGTH_SHORT);
 				toast.show();
 			}	
-	}	
-};
+		}	
+	};
 
-public void onResume() {
-	super.onResume();
+	public void onResume() {
+		super.onResume();
+
+	}
 	
-}
+	public void onStart() {
+		super.onStart();
+	}
+	
+	public void onStop() {
+		super.onStop();
+	}
+	
+	public void onDestroyView() {
+		super.onDestroyView();
+	}
 
-public void onPause() {
-	super.onPause();
-}
+	public void onPause() {
+		super.onPause();
+	}
 
-public void onAttach(Activity activity) {
-	super.onAttach(activity);
-	this.activity = (Polling) activity;
-}
+	public void onAttach(Activity activity) {
+		super.onAttach(activity);
+		this.activity = (Polling) activity;
+	}
 
 	public String getUsableTag() {
 		return "economics";

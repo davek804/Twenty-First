@@ -135,11 +135,11 @@ public class LoginFragment extends SherlockFragment {
 		public void onClick(View v) {
 			userFunctions.logoutUser(activity.getApplicationContext());
 			activity.bar.getTabAt(0).setText(R.string.login);
-			int duration = Toast.LENGTH_SHORT;
-			Toast toast = Toast.makeText(activity.getApplicationContext(), "Logged out", duration);
+			Toast toast = Toast.makeText(activity.getApplicationContext(), "Logged out", Toast.LENGTH_SHORT);
 			toast.show();
 			loginLayout.setVisibility(ScrollView.VISIBLE);
 			loggedInLayout.setVisibility(LinearLayout.GONE);
+			activity.userLoggedOut();
 		}
 	};
 	public OnClickListener demoListener = new OnClickListener() {
@@ -218,4 +218,5 @@ public class LoginFragment extends SherlockFragment {
 	public void onDetach() {
 		super.onDetach();
 	}
+
 }

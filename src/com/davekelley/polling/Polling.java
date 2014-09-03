@@ -113,6 +113,10 @@ public class Polling extends SherlockFragmentActivity {
             return super.onKeyDown(keyCode, event);
         }
     }
+	
+	public void userLoggedOut() {
+		this.recreate();
+	}
 
 	public void onResume() {
 		super.onResume();
@@ -302,8 +306,11 @@ public class Polling extends SherlockFragmentActivity {
 			SharedPreferences.Editor preferencesEditor = sp.edit();
 			preferencesEditor.putInt("lastPosition", mViewPager.getCurrentItem());
 			preferencesEditor.commit();
+			
 		}
-		public void onTabUnselected(Tab tab, FragmentTransaction ft) {}
+		public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+			
+		}
 		public void onTabReselected(Tab tab, FragmentTransaction ft) {}
 		public void onTabReselected(Tab tab, android.app.FragmentTransaction ft) {}
 		public void onTabUnselected(Tab tab, android.app.FragmentTransaction ft) {}
