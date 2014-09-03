@@ -8,8 +8,8 @@ import library.UserFunctions;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.actionbarsherlock.R;
-import com.actionbarsherlock.app.SherlockFragment;
+
+import android.app.Fragment;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
@@ -20,7 +20,7 @@ import android.widget.TableRow;
 public class GetQuestionsTask extends AsyncTask<Void, Void, Integer> {
 	Polling activity;
 	ProgressBar progressBar;
-	SherlockFragment fragment;
+	Fragment fragment;
 	JSONArray questionList;
 	RelativeLayout progressRow;
 	String category;
@@ -28,7 +28,7 @@ public class GetQuestionsTask extends AsyncTask<Void, Void, Integer> {
 	DatabaseHandler dbHandler;
 	ArrayList<Boolean> checkList;
 
-	public GetQuestionsTask(Polling activity, RelativeLayout progressRow2, SherlockFragment fragment) {
+	public GetQuestionsTask(Polling activity, RelativeLayout progressRow2, Fragment fragment) {
 		this.fragment = fragment;
 		this.activity = activity;
 		progressRow = progressRow2;

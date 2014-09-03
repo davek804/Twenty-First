@@ -6,7 +6,6 @@ import library.JSONParser;
 import library.UserFunctions;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.actionbarsherlock.R;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;

@@ -1,15 +1,11 @@
 package com.davekelley.polling;
 
 import java.util.ArrayList;
-
 import library.DatabaseHandler;
 import library.UserFunctions;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import android.R;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;

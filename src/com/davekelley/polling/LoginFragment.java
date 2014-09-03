@@ -2,11 +2,8 @@ package com.davekelley.polling;
 
 import library.DatabaseHandler;
 import library.UserFunctions;
-
-import com.actionbarsherlock.R;
-
-import com.actionbarsherlock.app.SherlockFragment;
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -29,7 +26,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
-public class LoginFragment extends SherlockFragment {
+public class LoginFragment extends Fragment {
 	Button loginButton;
 	Button registerButton;
 	Button logoutButton;
@@ -123,7 +120,7 @@ public class LoginFragment extends SherlockFragment {
 			switch (v.getId()) {
 			case (R.id.tabsButton):
 				LiveTabs cD = new LiveTabs("Modify Tabs", tabsButton, activity);
-				cD.show(activity.getSupportFragmentManager(), "");
+				cD.show(activity.getFragmentManager(), "");
 				break;
 				default:
 					break;

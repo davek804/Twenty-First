@@ -5,11 +5,10 @@ import java.util.List;
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 
-import com.actionbarsherlock.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
@@ -18,7 +17,6 @@ import android.content.res.Resources.Theme;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
@@ -48,8 +46,8 @@ DialogInterface.OnClickListener, OnMultiChoiceClickListener {
 	public ChooseDialog(String type, EditText editText, DemoPanel activity) {
 		this.type = type;
 		this.editText = editText;
-		this.activity = activity;
-		backgroundState = new Boolean[activity.getResources().getStringArray(R.array.backgroundArray).length];
+		//this.activity = activity;
+		//backgroundState = new Boolean[activity.getResources().getStringArray(R.array.backgroundArray).length];
 
 	}
 /*
