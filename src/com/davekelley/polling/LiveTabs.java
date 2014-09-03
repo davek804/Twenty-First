@@ -40,7 +40,7 @@ public class LiveTabs extends DialogFragment implements
 	public LiveTabs(String type, TextView textView, DemoPanel activity) {
 		this.type = type;
 		this.textView = textView;
-		this.activity = activity;
+		this.activity = getActivity();
 		backgroundState = new Boolean[activity.getResources().getStringArray(R.array.backgroundArray).length];
 	}
 	

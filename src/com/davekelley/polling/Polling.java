@@ -43,8 +43,8 @@ public class Polling extends Activity {
 		
 		bar = getActionBar();
 		bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-		bar.setDisplayShowTitleEnabled(false);
-		bar.setDisplayShowHomeEnabled(false);
+		bar.setDisplayShowTitleEnabled(true);
+		bar.setDisplayShowHomeEnabled(true);
 				
 //		mTabsAdapter = new TabsAdapter(this, mViewPager);
 //

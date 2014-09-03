@@ -20,7 +20,7 @@ import android.widget.TableRow;
 public class GetQuestionsTask extends AsyncTask<Void, Void, Integer> {
 	Polling activity;
 	ProgressBar progressBar;
-	Fragment fragment;
+	CategoryFragment categoryFragment;
 	JSONArray questionList;
 	RelativeLayout progressRow;
 	String category;
@@ -29,12 +29,12 @@ public class GetQuestionsTask extends AsyncTask<Void, Void, Integer> {
 	ArrayList<Boolean> checkList;
 
 	public GetQuestionsTask(Polling activity, RelativeLayout progressRow2, Fragment fragment) {
-		this.fragment = fragment;
+		categoryFragment = (CategoryFragment) fragment;
 		this.activity = activity;
 		progressRow = progressRow2;
 		userFunctions = new UserFunctions();
 		dbHandler = activity.getDB();
-		category = fragment.getUsableTag();
+		category = categoryFragment.getUsableTag();
 	}
 
 	protected void onPreExecute() {}
@@ -63,10 +63,10 @@ public class GetQuestionsTask extends AsyncTask<Void, Void, Integer> {
 				question = questionList.getJSONObject(j);
 				if (userFunctions.isUserLoggedIn(activity)) {
 					if (checkList.get(j)) {
-						fragment.buildQuestions(question, true);
+						categoryFragment.buildQuestions(question, true);
 					}
 					else {
-						fragment.buildQuestions(question, false);
+						categoryFragment.buildQuestions(question, false);
 					}
 
 				}} catch (JSONException e) {

@@ -168,19 +168,19 @@ public class EconFragment extends Fragment {
 	public OnClickListener chartsListener = new OnClickListener() {
 		public void onClick(View v) {
 			Intent chart = new Intent();
-			chart.setClass(activity, Chart.class);
-			chart.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			JSONObject question = (JSONObject) v.getTag();
-			try {
-				String category = question.getString("category");
-				String id = question.getString("id");
-				String title = question.getString("title");
-				chart.putExtra("CATEGORY", category);
-				chart.putExtra("ID", id);
-				chart.putExtra("TITLE", title);
-
-			} catch (JSONException e) {e.printStackTrace();}
-			startActivity(chart);
+//			chart.setClass(activity, Chart.class);
+//			chart.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//			JSONObject question = (JSONObject) v.getTag();
+//			try {
+//				String category = question.getString("category");
+//				String id = question.getString("id");
+//				String title = question.getString("title");
+//				chart.putExtra("CATEGORY", category);
+//				chart.putExtra("ID", id);
+//				chart.putExtra("TITLE", title);
+//
+//			} catch (JSONException e) {e.printStackTrace();}
+//			startActivity(chart);
 		}	
 	};
 

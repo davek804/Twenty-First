@@ -9,17 +9,17 @@ import android.widget.TextView;
 
 
 public class DemographicsFragment extends Fragment {
-	Chart activity;
+	//Chart activity;
 	String title;
 	String id;
 	String category;
 	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		activity = (Chart) getActivity();
+		//activity = (Chart) getActivity();
 		View v = inflater.inflate(R.layout.demofragment, container, false);
-	Bundle extras = activity.getExtras();
+	//Bundle extras = activity.getExtras();
 	TextView title = (TextView) v.findViewById(R.id.demoFragmentTitleTextView);
-	title.setText(extras.getString("TITLE"));
+	//title.setText(extras.getString("TITLE"));
 	return v;
 	}
 }

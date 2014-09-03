@@ -23,7 +23,7 @@ public class GetDemographics extends AsyncTask<String, Void, Integer> {
 	JSONObject object;
 
 	public GetDemographics(DemoPanel act, String string) {
-		this.activity = act;
+		activity = act;
 		user = string;
 	}
 
@@ -31,7 +31,7 @@ public class GetDemographics extends AsyncTask<String, Void, Integer> {
 
 	protected Integer doInBackground(String... params) {
 		UserFunctions userFunctions = new UserFunctions();
-		if (userFunctions.isUserLoggedIn(activity.getApplicationContext())) {
+		if (userFunctions.isUserLoggedIn(activity.getActivity().getApplicationContext())) {
 			object = (userFunctions.getDemographics(user));
 
 			return 1;

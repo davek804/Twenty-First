@@ -2,16 +2,24 @@ package com.davekelley.polling;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import library.DatabaseHandler;
 import library.UserFunctions;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+
+import android.app.ActionBar;
 import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -25,7 +33,7 @@ import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
-public class DemoPanel extends FragmentActivity {
+public class DemoPanel extends Fragment {
 	String email;
 	DatabaseHandler dbHandler;
 	EditText ageEditText;
@@ -51,52 +59,52 @@ public class DemoPanel extends FragmentActivity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.demopanel);
+		getActivity().setContentView(R.layout.demopanel);
 		act = this;
-		ActionBar bar = getSupportActionBar();
+		ActionBar bar = getActivity().getActionBar();
 		bar.setDisplayHomeAsUpEnabled(true);
-		context = getApplicationContext();
+		context = getActivity().getApplicationContext();
 		dbHandler = new DatabaseHandler(context);
-		setTitle(dbHandler.getUserDetails().get("email"));	
+		bar.setTitle(dbHandler.getUserDetails().get("email"));	
 		
-		ageEditText = (EditText) findViewById(R.id.ageEditText);
+		ageEditText = (EditText) getActivity().findViewById(R.id.ageEditText);
 		ageEditText.setOnClickListener(fieldListener);
 		ageEditText.setId(0);
-		educationEditText = (EditText) findViewById(R.id.educationEditText);
+		educationEditText = (EditText) getActivity().findViewById(R.id.educationEditText);
 		educationEditText.setOnClickListener(fieldListener);
 		educationEditText.setId(1);
-		maritalEditText = (EditText) findViewById(R.id.maritalEditText);
+		maritalEditText = (EditText) getActivity().findViewById(R.id.maritalEditText);
 		maritalEditText.setOnClickListener(fieldListener);
 		maritalEditText.setId(2);
-		backgroundEditText = (EditText) findViewById(R.id.backgroundEditText);
+		backgroundEditText = (EditText) getActivity().findViewById(R.id.backgroundEditText);
 		backgroundEditText.setOnClickListener(fieldListener);
 		backgroundEditText.setId(3);
-		incomeEditText = (EditText) findViewById(R.id.incomeEditText);
+		incomeEditText = (EditText) getActivity().findViewById(R.id.incomeEditText);
 		incomeEditText.setOnClickListener(fieldListener);
 		incomeEditText.setId(4);
-		partyEditText = (EditText) findViewById(R.id.partyEditText);
+		partyEditText = (EditText) getActivity().findViewById(R.id.partyEditText);
 		partyEditText.setOnClickListener(fieldListener);
 		partyEditText.setId(5);
 		
 
-		sex = (RadioGroup) findViewById(R.id.sexRadioGroup);
-		sexFemale = (RadioButton) findViewById(R.id.femaleRadio);
-		sexMale = (RadioButton) findViewById(R.id.maleRadio);
+		sex = (RadioGroup) getActivity().findViewById(R.id.sexRadioGroup);
+		sexFemale = (RadioButton) getActivity().findViewById(R.id.femaleRadio);
+		sexMale = (RadioButton) getActivity().findViewById(R.id.maleRadio);
 		sexFemale.setId(1);
 		sexMale.setId(2);
 		
-		employment = (RadioGroup) findViewById(R.id.employmentRadioGroup);
-		employmentYes = (RadioButton) findViewById(R.id.employedTrueRadio);
-		employmentNo = (RadioButton) findViewById(R.id.employedSelfRadio);
-		employmentSelf = (RadioButton) findViewById(R.id.employedSelfRadio);
+		employment = (RadioGroup) getActivity().findViewById(R.id.employmentRadioGroup);
+		employmentYes = (RadioButton) getActivity().findViewById(R.id.employedTrueRadio);
+		employmentNo = (RadioButton) getActivity().findViewById(R.id.employedSelfRadio);
+		employmentSelf = (RadioButton) getActivity().findViewById(R.id.employedSelfRadio);
 		employmentYes.setId(1);
 		employmentNo.setId(2);
 		employmentSelf.setId(3);
 		
-		reset = (Button) findViewById(R.id.resetButton);
+		reset = (Button) getActivity().findViewById(R.id.resetButton);
 		reset.setOnClickListener(fieldListener);
 		
-		submit = (Button) findViewById(R.id.submitButton);
+		submit = (Button) getActivity().findViewById(R.id.submitButton);
 		submit.setOnClickListener(fieldListener);
 		
 		GetDemographics gd = new GetDemographics(act, dbHandler.getUserDetails().get("email"));
@@ -104,7 +112,7 @@ public class DemoPanel extends FragmentActivity {
 	}
 	
 	public boolean onCreateOptionsMenu(Menu menu) {
-	    MenuInflater inflater = getSupportMenuInflater();
+	    MenuInflater inflater = getActivity().getMenuInflater();
 	    inflater.inflate(R.menu.demomenu, menu);
 	    return true;
 	}
@@ -115,7 +123,7 @@ public class DemoPanel extends FragmentActivity {
 
 	public OnClickListener fieldListener = new OnClickListener() {
 		public void onClick(View v) {
-			FragmentManager fm = getSupportFragmentManager();
+			FragmentManager fm = getFragmentManager();
 			switch (v.getId()) {
 			case (0) :
 				
@@ -241,7 +249,10 @@ public class DemoPanel extends FragmentActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 		 switch (item.getItemId()) {
 		 case android.R.id.home:
-		 Intent i = new Intent(this, Polling.class);
+		 //Intent i = new Intent(this, Polling.class);
+			 Intent i;
+			 i = new Intent();
+			 i.setClass(getActivity(), Polling.class);
         i.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(i);
 		 	return true;

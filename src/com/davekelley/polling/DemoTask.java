@@ -5,7 +5,6 @@ import library.DatabaseHandler;
 import library.UserFunctions;
 import org.apache.http.NameValuePair;
 import org.json.JSONArray;
-import com.actionbarsherlock.R;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -34,7 +33,7 @@ public class DemoTask extends AsyncTask<String, Void, Integer> {
 	}
 	
 	protected void onPostExecute(Integer numQuestions) {
-		Toast toast = Toast.makeText(activity.getApplicationContext(), "Updated!", Toast.LENGTH_SHORT);
+		Toast toast = Toast.makeText(activity.getActivity().getApplicationContext(), "Updated!", Toast.LENGTH_SHORT);
 		toast.show();
 	}
 }
